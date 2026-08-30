@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MercadoLibre - Clon en HTML puro (Claude)</title>
+</head>
+
+<body bgcolor="#EBEBEF" text="#333333" link="#3483FA" vlink="#3483FA">
+
+    <!-- ============================================================ -->
+    <!-- HEADER PRINCIPAL (amarillo)                                   -->
+    <!-- ============================================================ -->
+    <table width="100%" cellpadding="6" cellspacing="0" border="0" bgcolor="#FFE600">
+        <tr>
+            <td width="14%" align="left" valign="middle">
+                <font face="Arial, Helvetica, sans-serif" size="6" color="#2D3277"><b>mercado<font color="#FFFFFF">libre
+                        </font></b></font>
+            </td>
+            <td width="46%" valign="middle">
+                <form action="#" method="get">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td width="88%" bgcolor="#FFFFFF">
+                                <input type="text" name="q" size="70" placeholder="Buscar productos, marcas y más...">
+                            </td>
+                            <td width="12%" align="center" bgcolor="#FFE600">
+                                <input type="submit" value="Buscar">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td width="10%" align="center" valign="middle">
+                <font size="2" color="#333333">📍 Enviar a<br><b>Popayán</b></font>
+            </td>
+            <td width="12%" align="center" valign="middle">
+                <font size="2" color="#333333">Bienvenido<br><a href="#"><b>Creá tu cuenta</b></a></font>
+            </td>
+            <td width="8%" align="center" valign="middle">
+                <font size="2" color="#333333"><a href="#"><b>Ingresá</b></a></font>
+            </td>
+            <td width="5%" align="center" valign="middle">
+                <font size="2" color="#333333"><a href="#">Mis compras</a></font>
+            </td>
+            <td width="5%" align="center" valign="middle">
+                <font size="5" color="#333333"><a href="#">🛒</a></font>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Barra secundaria de categorías -->
+    <table width="100%" cellpadding="8" cellspacing="0" border="0" bgcolor="#FFFFFF">
+        <tr>
+            <td align="left">
+                <font size="2" color="#333333">
+                    <a href="#"><b>☰ Categorías</b></a> &nbsp;|&nbsp;
+                    <a href="#">Ofertas</a> &nbsp;|&nbsp;
+                    <a href="#">Cupones</a> &nbsp;|&nbsp;
+                    <a href="#">Supermercado</a> &nbsp;|&nbsp;
+                    <a href="#">Moda</a> &nbsp;|&nbsp;
+                    <a href="#">Mercado Play</a> &nbsp;|&nbsp;
+                    <a href="#">Vendé</a> &nbsp;|&nbsp;
+                    <a href="#">Ayuda</a>
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td height="8" bgcolor="#EBEBEF"></td>
+        </tr>
+    </table>
+
+    <!-- ============================================================ -->
+    <!-- BANNER PRINCIPAL                                              -->
+    <!-- ============================================================ -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td width="100%" align="center" bgcolor="#3483FA" height="180">
+                <font face="Arial, Helvetica, sans-serif" size="7" color="#FFFFFF"><b>HOT SALE - Hasta 40% OFF</b>
+                </font><br>
+                <font size="4" color="#FFFFFF">en Tecnología, Hogar y Moda &nbsp;|&nbsp; Envío gratis en miles de
+                    productos</font>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td height="12" bgcolor="#EBEBEF"></td>
+        </tr>
+    </table>
+
+    <!-- ============================================================ -->
+    <!-- CATEGORÍAS DESTACADAS                                         -->
+    <!-- ============================================================ -->
+    <table width="96%" align="center" cellpadding="10" cellspacing="10" border="0" bgcolor="#FFFFFF">
+        <tr>
+            <td align="center" width="12%">
+                <font size="6">💻</font><br>
+                <font size="2"><a href="#">Tecnología</a></font>
+            </td>
+            <td align="center" width="12%">
+                <font size="6">🧺</font><br>
+                <font size="2"><a href="#">Electrodomésticos</a></font>
+            </td>
+            <td align="center" width="12%">
+                <font size="6">👗</font><br>
+                <font size="2"><a href="#">Moda</a></font>
+            </td>
+            <td align="center" width="12%">
+                <font size="6">🏠</font><br>
+                <font size="2"><a href="#">Hogar</a></font>
+            </td>
+            <td align="center" width="12%">
+                <font size="6">⚽</font><br>
+                <font size="2"><a href="#">Deportes</a></font>
+            </td>
+            <td align="center" width="12%">
+                <font size="6">🚗</font><br>
+                <font size="2"><a href="#">Vehículos</a></font>
+            </td>
+            <td align="center" width="12%">
+                <font size="6">💄</font><br>
+                <font size="2"><a href="#">Belleza</a></font>
+            </td>
+            <td align="center" width="12%">
+                <font size="6">🧸</font><br>
+                <font size="2"><a href="#">Juguetes</a></font>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td height="12" bgcolor="#EBEBEF"></td>
+        </tr>
+    </table>
+
+    <!-- ============================================================ -->
+    <!-- OFERTAS DEL DÍA                                               -->
+    <!-- ============================================================ -->
+    <table width="96%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+        <tr>
+            <td>
+                <font size="5" color="#333333"><b>Ofertas del día</b></font> &nbsp;<font size="2" color="#3483FA"><a
+                        href="#">Ver todas</a></font>
+            </td>
+        </tr>
+    </table>
+
+    <table width="96%" align="center" cellpadding="10" cellspacing="10" border="0">
+        <tr>
+
+            <td width="20%" valign="top" align="center" bgcolor="#FFFFFF">
+                <table width="100%" cellpadding="6" cellspacing="0" border="1" bordercolor="#EEEEEE">
+                    <tr>
+                        <td align="center" bgcolor="#F5F5F5" height="120">
+                            <font size="6">📱</font><br>
+                            <font size="1" color="#999999">imagen del producto</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">Samsung Galaxy A15 128GB 4GB RAM</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="1" color="#999999"><strike>$ 899.000</strike></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="4" color="#333333"><b>$ 649.000</b></font>
+                            <font size="2" color="#00A650">27% OFF</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#00A650"><b>Envío gratis</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">⭐⭐⭐⭐⭐ (1.204)</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="20%" valign="top" align="center" bgcolor="#FFFFFF">
+                <table width="100%" cellpadding="6" cellspacing="0" border="1" bordercolor="#EEEEEE">
+                    <tr>
+                        <td align="center" bgcolor="#F5F5F5" height="120">
+                            <font size="6">🎧</font><br>
+                            <font size="1" color="#999999">imagen del producto</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">Audífonos Bluetooth JBL Tune 510BT</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="1" color="#999999"><strike>$ 250.000</strike></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="4" color="#333333"><b>$ 179.900</b></font>
+                            <font size="2" color="#00A650">28% OFF</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#00A650"><b>Envío gratis</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">⭐⭐⭐⭐⭐ (856)</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="20%" valign="top" align="center" bgcolor="#FFFFFF">
+                <table width="100%" cellpadding="6" cellspacing="0" border="1" bordercolor="#EEEEEE">
+                    <tr>
+                        <td align="center" bgcolor="#F5F5F5" height="120">
+                            <font size="6">🧊</font><br>
+                            <font size="1" color="#999999">imagen del producto</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">Nevera No Frost 300L Whirlpool</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="1" color="#999999"><strike>$ 2.400.000</strike></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="4" color="#333333"><b>$ 1.899.000</b></font>
+                            <font size="2" color="#00A650">21% OFF</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#00A650"><b>Envío gratis</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">⭐⭐⭐⭐ (312)</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="20%" valign="top" align="center" bgcolor="#FFFFFF">
+                <table width="100%" cellpadding="6" cellspacing="0" border="1" bordercolor="#EEEEEE">
+                    <tr>
+                        <td align="center" bgcolor="#F5F5F5" height="120">
+                            <font size="6">👟</font><br>
+                            <font size="1" color="#999999">imagen del producto</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">Tenis Deportivos Running Unisex</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="1" color="#999999"><strike>$ 320.000</strike></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="4" color="#333333"><b>$ 199.900</b></font>
+                            <font size="2" color="#00A650">37% OFF</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#00A650"><b>Envío gratis</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">⭐⭐⭐⭐⭐ (2.011)</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+    </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td height="12" bgcolor="#EBEBEF"></td>
+        </tr>
+    </table>
+
+    <!-- ============================================================ -->
+    <!-- MÁS VENDIDOS                                                  -->
+    <!-- ============================================================ -->
+    <table width="96%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+        <tr>
+            <td>
+                <font size="5" color="#333333"><b>Los más vendidos</b></font> &nbsp;<font size="2" color="#3483FA"><a
+                        href="#">Ver todos</a></font>
+            </td>
+        </tr>
+    </table>
+
+    <table width="96%" align="center" cellpadding="10" cellspacing="10" border="0">
+        <tr>
+
+            <td width="20%" valign="top" align="center" bgcolor="#FFFFFF">
+                <table width="100%" cellpadding="6" cellspacing="0" border="1" bordercolor="#EEEEEE">
+                    <tr>
+                        <td align="center" bgcolor="#F5F5F5" height="120">
+                            <font size="6">⌚</font><br>
+                            <font size="1" color="#999999">imagen del producto</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">Smartwatch Xiaomi Redmi Watch 4</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="4" color="#333333"><b>$ 269.000</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#00A650"><b>Envío gratis</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">⭐⭐⭐⭐⭐ (980)</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="20%" valign="top" align="center" bgcolor="#FFFFFF">
+                <table width="100%" cellpadding="6" cellspacing="0" border="1" bordercolor="#EEEEEE">
+                    <tr>
+                        <td align="center" bgcolor="#F5F5F5" height="120">
+                            <font size="6">🖥️</font><br>
+                            <font size="1" color="#999999">imagen del producto</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">Monitor Gamer 27" 165Hz Full HD</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="4" color="#333333"><b>$ 899.900</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#00A650"><b>Envío gratis</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">⭐⭐⭐⭐⭐ (410)</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="20%" valign="top" align="center" bgcolor="#FFFFFF">
+                <table width="100%" cellpadding="6" cellspacing="0" border="1" bordercolor="#EEEEEE">
+                    <tr>
+                        <td align="center" bgcolor="#F5F5F5" height="120">
+                            <font size="6">🎮</font><br>
+                            <font size="1" color="#999999">imagen del producto</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">Control Inalámbrico PS5 DualSense</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="4" color="#333333"><b>$ 349.900</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#00A650"><b>Envío gratis</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">⭐⭐⭐⭐⭐ (1.578)</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="20%" valign="top" align="center" bgcolor="#FFFFFF">
+                <table width="100%" cellpadding="6" cellspacing="0" border="1" bordercolor="#EEEEEE">
+                    <tr>
+                        <td align="center" bgcolor="#F5F5F5" height="120">
+                            <font size="6">☕</font><br>
+                            <font size="1" color="#999999">imagen del producto</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">Cafetera Eléctrica Oster 12 Tazas</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="4" color="#333333"><b>$ 159.900</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#00A650"><b>Envío gratis</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font size="2" color="#333333">⭐⭐⭐⭐ (203)</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+    </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td height="20" bgcolor="#EBEBEF"></td>
+        </tr>
+    </table>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER                                                        -->
+    <!-- ============================================================ -->
+    <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#EEEEEE">
+        <tr>
+            <td width="25%" valign="top">
+                <font size="3" color="#333333"><b>Acerca de MercadoLibre</b></font><br><br>
+                <font size="2" color="#666666">
+                    <a href="#">Investor relations</a><br>
+                    <a href="#">Tendencias</a><br>
+                    <a href="#">Sustentabilidad</a><br>
+                    <a href="#">Blog</a>
+                </font>
+            </td>
+            <td width="25%" valign="top">
+                <font size="3" color="#333333"><b>Otros sitios</b></font><br><br>
+                <font size="2" color="#666666">
+                    <a href="#">Mercado Pago</a><br>
+                    <a href="#">Mercado Shops</a><br>
+                    <a href="#">Mercado Ads</a><br>
+                    <a href="#">Developers</a>
+                </font>
+            </td>
+            <td width="25%" valign="top">
+                <font size="3" color="#333333"><b>Ayuda</b></font><br><br>
+                <font size="2" color="#666666">
+                    <a href="#">Comprar</a><br>
+                    <a href="#">Vender</a><br>
+                    <a href="#">Resolución de problemas</a><br>
+                    <a href="#">Centro de seguridad</a>
+                </font>
+            </td>
+            <td width="25%" valign="top">
+                <font size="3" color="#333333"><b>Seguinos en</b></font><br><br>
+                <font size="4" color="#333333">
+                    <a href="#">📘</a> &nbsp;
+                    <a href="#">📷</a> &nbsp;
+                    <a href="#">🐦</a> &nbsp;
+                    <a href="#">▶️</a>
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#DDDDDD">
+        <tr>
+            <td align="center">
+                <font size="1" color="#666666">Copyright © 2026 - Clon educativo hecho en HTML puro (sin CSS ni
+                    JavaScript) - No afiliado a MercadoLibre</font>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
