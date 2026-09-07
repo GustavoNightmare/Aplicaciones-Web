@@ -1,98 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Mercado Libre Colombia - Envíos Gratis en el día</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Libre Colombia</title>
 </head>
+<body bgcolor="#EBEBEB" text="#333333" marginwidth="0" marginheight="0">
 
-<body bgcolor="#EBEBEB" text="#333333" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
-
-    <!-- ==================== HEADER PRINCIPAL ==================== -->
-    <table width="100%" bgcolor="#FFE600" border="0" cellpadding="0" cellspacing="0">
+    <table width="100%" bgcolor="#FFE600" cellpadding="0" cellspacing="0" border="0">
         <tr>
             <td align="center">
-                <table width="1200" border="0" cellpadding="8" cellspacing="0">
-                    <!-- Fila Superior: Logo, Buscador, Banner de Beneficio -->
+                <table width="1180" cellpadding="8" cellspacing="0" border="0">
                     <tr>
-                        <td width="160" valign="middle">
-                            <a href="#">
-                                <img src="img/logo.png" alt="Mercado Libre" width="134" height="34" border="0">
-                            </a>
+                        <td width="150">
+                            <a href="#inicio"><img src="../img/logo.png" alt="Mercado Libre" width="134" border="0"></a>
                         </td>
-                        <td width="600" valign="middle" align="center">
-                            <!-- Barra de Búsqueda -->
+                        <td width="650">
                             <form action="#" method="get">
-                                <table width="100%" bgcolor="#FFFFFF" border="0" cellpadding="6" cellspacing="0">
-                                    <tr>
-                                        <td width="92%">
-                                            <input type="text" name="as_word"
-                                                placeholder="Buscar productos, marcas y más..." size="55"
-                                                style="border:none; outline:none;">
-                                        </td>
-                                        <td width="8%" align="center">
-                                            <input type="submit" value="🔍">
-                                        </td>
-                                    </tr>
-                                </table>
+                                <input type="search" name="buscar" size="55" placeholder="Buscar productos, marcas y m&aacute;s...">
+                                <input type="submit" value="Buscar">
                             </form>
                         </td>
-                        <td width="440" align="right" valign="middle">
-                            <!-- Aquí está la Banana de reemplazo -->
-                            <a href="#">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/120px-Banana-Single.jpg"
-                                    alt="Banana Meli+" height="39" border="0">
-                            </a>
+                        <td width="250" align="right">
+                            <a href="#beneficios"><b>Suscr&iacute;bete al nivel 6</b></a>
                         </td>
                     </tr>
-
-                    <!-- Fila Inferior: Ubicación, Categorías, Menú Usuario -->
                     <tr>
-                        <td width="160" valign="middle">
-                            <font size="2" color="#735900">📍 Ingresa tu <b>código postal</b></font>
+                        <td>
+                            <a href="#ubicacion">&#128205; Ingresa tu ubicaci&oacute;n</a>
                         </td>
-                        <td width="600" valign="middle">
-                            <table border="0" cellpadding="4" cellspacing="0">
-                                <tr>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Categorías ▾</font>
-                                        </a></td>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Ofertas</font>
-                                        </a></td>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Historial</font>
-                                        </a></td>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Supermercado</font>
-                                        </a></td>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Moda</font>
-                                        </a></td>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Vender</font>
-                                        </a></td>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Ayuda / PQR</font>
-                                        </a></td>
-                                </tr>
-                            </table>
+                        <td>
+                            <a href="#categorias">Categor&iacute;as &#9662;</a>&nbsp;&nbsp;
+                            <a href="#ofertas">Ofertas</a>&nbsp;&nbsp;
+                            <a href="#historial">Historial</a>&nbsp;&nbsp;
+                            <a href="#supermercado">Supermercado</a>&nbsp;&nbsp;
+                            <a href="#moda">Moda</a>&nbsp;&nbsp;
+                            <a href="#vender">Vender</a>&nbsp;&nbsp;
+                            <a href="#ayuda">Ayuda / PQR</a>
                         </td>
-                        <td width="440" align="right" valign="middle">
-                            <table border="0" cellpadding="4" cellspacing="0">
-                                <tr>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Crea tu cuenta</font>
-                                        </a></td>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Ingresa</font>
-                                        </a></td>
-                                    <td><a href="#">
-                                            <font size="2" color="#333333">Mis compras</font>
-                                        </a></td>
-                                    <td><a href="#">🛒</a></td>
-                                </tr>
-                            </table>
+                        <td align="right">
+                            <a href="#cuenta">Crea tu cuenta</a>&nbsp;&nbsp;
+                            <a href="#ingresa">Ingresa</a>&nbsp;&nbsp;
+                            <a href="#compras">Mis compras</a>&nbsp;&nbsp;
+                            <a href="#carrito" aria-label="Carrito de compras">&#128722;</a>
                         </td>
                     </tr>
                 </table>
@@ -102,232 +52,78 @@
 
     <br>
 
-    <!-- ==================== BANNER PRINCIPAL (HERO) ==================== -->
-    <table width="1200" align="center" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td align="center">
-                <a href="#">
-                    <img src="img/banner-hero.webp" alt="Ofertas de la semana" width="1200" height="340" border="0">
-                </a>
-            </td>
-        </tr>
-    </table>
-
-    <br>
-
-    <!-- ==================== BARRA DE MEDIOS DE PAGO ==================== -->
-    <table width="1200" align="center" bgcolor="#FFFFFF" border="0" cellpadding="15" cellspacing="0">
-        <tr align="center">
-            <td width="25%">
-                <table border="0" cellpadding="4" cellspacing="0">
-                    <tr>
-                        <td>💳</td>
-                        <td align="left">
-                            <font size="3"><b>Hasta 48 cuotas</b></font><br>
-                            <a href="#">
-                                <font size="2" color="#3483FA">Ver más</font>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td width="25%">
-                <table border="0" cellpadding="4" cellspacing="0">
-                    <tr>
-                        <td>🏦</td>
-                        <td align="left">
-                            <font size="3"><b>Transferencia bancaria</b></font><br>
-                            <a href="#">
-                                <font size="2" color="#3483FA">Ver más</font>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td width="25%">
-                <table border="0" cellpadding="4" cellspacing="0">
-                    <tr>
-                        <td>💵</td>
-                        <td align="left">
-                            <font size="3"><b>Efectivo en puntos</b></font><br>
-                            <a href="#">
-                                <font size="2" color="#3483FA">Ver más</font>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td width="25%">
-                <table border="0" cellpadding="4" cellspacing="0">
-                    <tr>
-                        <td>➕</td>
-                        <td align="left">
-                            <font size="3"><b>Más medios de pago</b></font><br>
-                            <a href="#">
-                                <font size="2" color="#3483FA">Ver todos</font>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-
-    <br><br>
-
-    <!-- ==================== SECCIÓN: OFERTAS DEL DÍA ==================== -->
-    <table width="1200" align="center" border="0" cellpadding="4" cellspacing="0">
+    <table id="inicio" width="1180" align="center" cellpadding="0" cellspacing="0" border="0">
         <tr>
             <td>
-                <font size="5" color="#666666"><b>Ofertas del día</b></font>
-                &nbsp;&nbsp;
-                <a href="#">
-                    <font size="2" color="#3483FA">Ver todas</font>
-                </a>
+                <a href="#ofertas"><img src="../img/banner-hero.webp" alt="Ofertas de la semana" width="1180" border="0"></a>
             </td>
         </tr>
     </table>
 
-    <br>
+    <table width="1180" align="center" bgcolor="#FFFFFF" cellpadding="15" cellspacing="0" border="0">
+        <tr>
+            <td width="25%">&#128179; <b>Hasta 48 cuotas</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#cuotas">Ver m&aacute;s</a></td>
+            <td width="25%">&#127974; <b>Transferencia bancaria</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#transferencia">Ver m&aacute;s</a></td>
+            <td width="25%">&#128181; <b>Efectivo en puntos</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#efectivo">Ver m&aacute;s</a></td>
+            <td width="25%">&#10133; <b>M&aacute;s medios de pago</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#pagos">Ver todos</a></td>
+        </tr>
+    </table>
 
-    <!-- CARDS DE PRODUCTOS -->
-    <table width="1200" align="center" border="0" cellpadding="0" cellspacing="12">
+    <br><br>
+
+    <table width="1180" align="center" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td><h1 id="ofertas">Ofertas del d&iacute;a</h1></td>
+            <td align="right"><a href="#todas">Ver todas las ofertas</a></td>
+        </tr>
+    </table>
+
+    <table width="1180" align="center" cellpadding="8" cellspacing="8" border="0">
         <tr valign="top">
-            <!-- Producto 1 -->
             <td width="20%" bgcolor="#FFFFFF">
-                <table width="100%" border="0" cellpadding="10" cellspacing="0">
-                    <tr>
-                        <td align="center">
-                            <img src="img/producto-1.webp" alt="Smartphone" width="180" height="180">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font size="2" color="#999999"><s>$ 1.299.900</s></font><br>
-                            <font size="5" color="#333333"><b>$ 899.900</b></font>
-                            <font size="2" color="#00A650"><b>30% OFF</b></font><br>
-                            <font size="2" color="#00A650"><b>⚡ Envío gratis FULL</b></font><br>
-                            <font size="2" color="#666666">Samsung Galaxy A15 128 GB Azul</font>
-                        </td>
-                    </tr>
-                </table>
+                <a href="#producto-1"><img src="../img/producto-1.webp" alt="Samsung Galaxy A15 azul" width="200" border="0"></a><hr>
+                <s>$ 1.299.900</s><br><font size="5">$ 899.900</font> <font color="#00A650">30% OFF</font><br>
+                <font color="#00A650">Env&iacute;o gratis FULL</font><p>Samsung Galaxy A15 128 GB Azul</p>
             </td>
-
-            <!-- Producto 2 -->
             <td width="20%" bgcolor="#FFFFFF">
-                <table width="100%" border="0" cellpadding="10" cellspacing="0">
-                    <tr>
-                        <td align="center">
-                            <img src="img/producto-2.webp" alt="Laptop" width="180" height="180">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font size="2" color="#999999"><s>$ 2.450.000</s></font><br>
-                            <font size="5" color="#333333"><b>$ 1.799.000</b></font>
-                            <font size="2" color="#00A650"><b>26% OFF</b></font><br>
-                            <font size="2" color="#00A650"><b>⚡ Envío gratis FULL</b></font><br>
-                            <font size="2" color="#666666">Portátil Lenovo Ideapad 3 Intel Core i5 8GB</font>
-                        </td>
-                    </tr>
-                </table>
+                <a href="#producto-2"><img src="../img/producto-2.webp" alt="Port&aacute;til Lenovo Ideapad" width="200" border="0"></a><hr>
+                <s>$ 2.450.000</s><br><font size="5">$ 1.799.000</font> <font color="#00A650">26% OFF</font><br>
+                <font color="#00A650">Env&iacute;o gratis FULL</font><p>Port&aacute;til Lenovo Ideapad 3 Intel Core i5</p>
             </td>
-
-            <!-- Producto 3 (Repetimos producto 1 para llenar el espacio) -->
             <td width="20%" bgcolor="#FFFFFF">
-                <table width="100%" border="0" cellpadding="10" cellspacing="0">
-                    <tr>
-                        <td align="center">
-                            <img src="img/producto-1.webp" alt="Smartphone" width="180" height="180">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font size="2" color="#999999"><s>$ 240.000</s></font><br>
-                            <font size="5" color="#333333"><b>$ 119.900</b></font>
-                            <font size="2" color="#00A650"><b>50% OFF</b></font><br>
-                            <font size="2" color="#00A650"><b>⚡ Envío gratis FULL</b></font><br>
-                            <font size="2" color="#666666">Audífonos Bluetooth Inalámbricos Cancelación</font>
-                        </td>
-                    </tr>
-                </table>
+                <a href="#producto-3"><img src="../img/producto-1.webp" alt="Aud&iacute;fonos inal&aacute;mbricos" width="200" border="0"></a><hr>
+                <s>$ 240.000</s><br><font size="5">$ 119.900</font> <font color="#00A650">50% OFF</font><br>
+                <font color="#00A650">Env&iacute;o gratis FULL</font><p>Aud&iacute;fonos Bluetooth inal&aacute;mbricos</p>
             </td>
-
-            <!-- Producto 4 (Repetimos producto 2 para llenar el espacio) -->
             <td width="20%" bgcolor="#FFFFFF">
-                <table width="100%" border="0" cellpadding="10" cellspacing="0">
-                    <tr>
-                        <td align="center">
-                            <img src="img/producto-2.webp" alt="Laptop" width="180" height="180">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font size="2" color="#999999"><s>$ 1.800.000</s></font><br>
-                            <font size="5" color="#333333"><b>$ 1.349.000</b></font>
-                            <font size="2" color="#00A650"><b>25% OFF</b></font><br>
-                            <font size="2" color="#00A650"><b>⚡ Envío gratis FULL</b></font><br>
-                            <font size="2" color="#666666">Smart TV 43 Pulgadas 4K Ultra HD HDR</font>
-                        </td>
-                    </tr>
-                </table>
+                <a href="#producto-4"><img src="../img/producto-2.webp" alt="Smart TV 4K" width="200" border="0"></a><hr>
+                <s>$ 1.800.000</s><br><font size="5">$ 1.349.000</font> <font color="#00A650">25% OFF</font><br>
+                <font color="#00A650">Env&iacute;o gratis FULL</font><p>Smart TV 43 pulgadas 4K Ultra HD</p>
             </td>
-
-            <!-- Producto 5 (Repetimos producto 1 para llenar el espacio) -->
             <td width="20%" bgcolor="#FFFFFF">
-                <table width="100%" border="0" cellpadding="10" cellspacing="0">
-                    <tr>
-                        <td align="center">
-                            <img src="img/producto-1.webp" alt="Smartphone" width="180" height="180">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font size="2" color="#999999"><s>$ 350.000</s></font><br>
-                            <font size="5" color="#333333"><b>$ 199.900</b></font>
-                            <font size="2" color="#00A650"><b>42% OFF</b></font><br>
-                            <font size="2" color="#00A650"><b>⚡ Envío gratis</b></font><br>
-                            <font size="2" color="#666666">Tenis Deportivos Running Unisex Ultraligeros</font>
-                        </td>
-                    </tr>
-                </table>
+                <a href="#producto-5"><img src="../img/producto-1.webp" alt="Tenis deportivos" width="200" border="0"></a><hr>
+                <s>$ 350.000</s><br><font size="5">$ 199.900</font> <font color="#00A650">42% OFF</font><br>
+                <font color="#00A650">Env&iacute;o gratis</font><p>Tenis deportivos running unisex</p>
             </td>
         </tr>
     </table>
 
     <br><br>
 
-    <!-- ==================== FOOTER ==================== -->
-    <table width="100%" bgcolor="#FFFFFF" border="0" cellpadding="20" cellspacing="0">
+    <table width="100%" bgcolor="#FFFFFF" cellpadding="20" cellspacing="0" border="0">
         <tr>
             <td align="center">
-                <table width="1200" border="0" cellpadding="6" cellspacing="0">
-                    <tr>
-                        <td>
-                            <font size="2" color="#333333">
-                                <b>Trabaja con nosotros</b> &nbsp;|&nbsp;
-                                <b>Términos y condiciones</b> &nbsp;|&nbsp;
-                                <b>Promociones</b> &nbsp;|&nbsp;
-                                <b>Cómo cuidamos tu privacidad</b> &nbsp;|&nbsp;
-                                <b>Accesibilidad</b> &nbsp;|&nbsp;
-                                <b>Ayuda / PQR</b>
-                            </font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font size="1" color="#999999">
-                                Copyright © 1999-2026 MercadoLibre Colombia LTDA. Carrera 17 Numero 93 - 09 Piso 3,
-                                Bogotá D.C., Colombia.<br>
-                                Conoce los términos y condiciones de las promociones aplicables a las compras.
-                            </font>
-                        </td>
-                    </tr>
-                </table>
+                <a href="#trabajo">Trabaja con nosotros</a>&nbsp;&nbsp;|
+                <a href="#terminos">T&eacute;rminos y condiciones</a>&nbsp;&nbsp;|
+                <a href="#promociones">Promociones</a>&nbsp;&nbsp;|
+                <a href="#privacidad">C&oacute;mo cuidamos tu privacidad</a>&nbsp;&nbsp;|
+                <a href="#accesibilidad">Accesibilidad</a>&nbsp;&nbsp;|
+                <a href="#ayuda">Ayuda / PQR</a>
+                <p><small>Copyright &copy; 1999-2026 MercadoLibre Colombia LTDA.</small></p>
+                <p><small>Maqueta educativa realizada solo con HTML.</small></p>
             </td>
         </tr>
     </table>
 
 </body>
-
 </html>
