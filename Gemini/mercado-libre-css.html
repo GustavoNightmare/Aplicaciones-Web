@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercado Libre - HTML + CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Proxima Nova', -apple-system, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ebebeb;
+            color: #333;
+        }
+
+        /* Header */
+        .ml-header {
+            background-color: #ffe600;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-container {
+            width: 1200px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 134px;
+            height: 34px;
+            background-image: url('https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.73/mercadolibre/logo__large_plus.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+        }
+
+        .search-bar {
+            display: flex;
+            width: 600px;
+            background: #fff;
+            border-radius: 2px;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            border-radius: 2px 0 0 2px;
+            color: #333;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+            border-left: 1px solid #e6e6e6;
+        }
+
+        .promo-header img {
+            height: 39px;
+            border-radius: 4px;
+        }
+
+        .header-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 14px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 1.2;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .location:hover {
+            border: 1px solid rgba(0,0,0,.1);
+            padding: 4px;
+        }
+
+        .location-icon {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .location span {
+            color: rgba(51,51,51,.5);
+        }
+
+        .location strong {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .nav-links a, .user-nav a {
+            color: rgba(51,51,51,.6);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover, .user-nav a:hover {
+            color: #333;
+        }
+
+        .user-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            list-style: none;
+        }
+
+        /* Main Content */
+        .main-container {
+            width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+
+        .banner {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .banner img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Payment Section */
+        .payment-section {
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 40px 0;
+        }
+
+        .payment-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .payment-item img {
+            width: 45px;
+        }
+
+        .payment-text h3 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+
+        .payment-text a {
+            font-size: 14px;
+            color: #3483fa;
+            text-decoration: none;
+        }
+
+        /* Offers Section */
+        .section-title {
+            font-size: 24px;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: #3483fa;
+            text-decoration: none;
+        }
+
+        .products-grid {
+            display: flex;
+            gap: 16px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+            flex: 1;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow .2s;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 7px 16px 0 rgba(0,0,0,.2);
+        }
+
+        .product-img-container {
+            width: 100%;
+            height: 224px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-img-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 20px 15px;
+            flex-grow: 1;
+            border-top: 1px solid #ebebeb;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .discount {
+            font-size: 14px;
+            color: #00a650;
+        }
+
+        .installments {
+            font-size: 14px;
+            color: #00a650;
+            margin-bottom: 5px;
+        }
+
+        .free-shipping {
+            font-size: 12px;
+            color: #00a650;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            color: #666;
+            display: none;
+            line-height: 1.3;
+        }
+
+        .product-card:hover .product-title {
+            display: block;
+        }
+
+        /* Footer */
+        .ml-footer {
+            background: #fff;
+            padding: 40px 0;
+            border-top: 1px solid #e6e6e6;
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            width: 1200px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            font-size: 13px;
+        }
+
+        .footer-links a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header class="ml-header">
+        <div class="header-container">
+            <div class="header-top">
+                <a href="#" class="logo"></a>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar productos, marcas y más...">
+                    <button type="submit">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+                
+                <a href="#" class="promo-header">
+                    <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.73/mercadolibre/disney-level6-benefit.png" alt="Nivel 6">
+                </a>
+            </div>
+
+            <div class="header-bottom">
+                <a href="#" class="location">
+                    <div class="location-icon">📍</div>
+                    <div>
+                        <span>Ingresa tu</span><br>
+                        <strong>código postal</strong>
+                    </div>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#">Categorías ⌄</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Historial</a></li>
+                    <li><a href="#">Supermercado</a></li>
+                    <li><a href="#">Moda</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+
+                <ul class="user-nav">
+                    <li><a href="#">Crea tu cuenta</a></li>
+                    <li><a href="#">Ingresa</a></li>
+                    <li><a href="#">Mis compras</a></li>
+                    <li><a href="#">🛒</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="banner">
+            <a href="#">
+                <img src="https://http2.mlstatic.com/D_NQ_853517-MLA74676571526_022024-OO.webp" alt="Banner Principal">
+            </a>
+        </div>
+
+        <section class="payment-section">
+            <div class="payment-item">
+                <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/credit-card.svg" alt="Tarjeta">
+                <div class="payment-text">
+                    <h3>Hasta 12 cuotas sin tarjeta</h3>
+                    <a href="#">Ver más</a>
+                </div>
+            </div>
+            <div class="payment-item">
+                <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/transfer.svg" alt="Transferencia">
+                <div class="payment-text">
+                    <h3>Transferencia o débito</h3>
+                    <a href="#">Ver más</a>
+                </div>
+            </div>
+            <div class="payment-item">
+                <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/mercado-credits.svg" alt="Efectivo">
+                <div class="payment-text">
+                    <h3>Efectivo</h3>
+                    <a href="#">Ver más</a>
+                </div>
+            </div>
+            <div class="payment-item">
+                <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/view-more.svg" alt="Más">
+                <div class="payment-text">
+                    <h3>Más medios de pago</h3>
+                    <a href="#">Ver todos</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Ofertas <a href="#">Ver todas</a></h2>
+            <div class="products-grid">
+                <a href="#" class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_608132-MLA53239270919_012023-O.webp" alt="Samsung">
+                    </div>
+                    <div class="product-info">
+                        <div class="price-container">
+                            <span class="price">$ 120.000</span>
+                        </div>
+                        <div class="installments">Mismo precio en 12 cuotas de $ 10.000</div>
+                        <div class="free-shipping">Envío gratis</div>
+                        <div class="product-title">Samsung Galaxy S23 256 GB Phantom Black 8 GB RAM</div>
+                    </div>
+                </a>
+
+                <a href="#" class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_715904-MLA72087563853_102023-O.webp" alt="Zapatillas">
+                    </div>
+                    <div class="product-info">
+                        <div class="price-container">
+                            <span class="price">$ 15.000</span>
+                            <span class="discount">25% OFF</span>
+                        </div>
+                        <div class="installments">en 3x $ 5.000 sin interés</div>
+                        <div class="free-shipping">Envío gratis</div>
+                        <div class="product-title">Zapatillas Deportivas Running Para Hombre Mujer</div>
+                    </div>
+                </a>
+
+                <a href="#" class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_658249-MLA51368686159_082022-O.webp" alt="TV">
+                    </div>
+                    <div class="product-info">
+                        <div class="price-container">
+                            <span class="price">$ 350.000</span>
+                            <span class="discount">12% OFF</span>
+                        </div>
+                        <div class="installments">en 12x $ 29.166</div>
+                        <div class="free-shipping">Envío gratis</div>
+                        <div class="product-title">Smart TV 50 Pulgadas 4K Ultra HD Android TV</div>
+                    </div>
+                </a>
+
+                <a href="#" class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_824706-MLA54273574945_032023-O.webp" alt="Auriculares">
+                    </div>
+                    <div class="product-info">
+                        <div class="price-container">
+                            <span class="price">$ 50.000</span>
+                        </div>
+                        <div class="installments">en 6x $ 8.333 sin interés</div>
+                        <div class="free-shipping">Envío gratis</div>
+                        <div class="product-title">Auriculares Inalámbricos Bluetooth Con Cancelación Ruido</div>
+                    </div>
+                </a>
+
+                <a href="#" class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_630623-MLA72166542571_102023-O.webp" alt="Smartwatch">
+                    </div>
+                    <div class="product-info">
+                        <div class="price-container">
+                            <span class="price">$ 85.000</span>
+                            <span class="discount">15% OFF</span>
+                        </div>
+                        <div class="installments">en 12x $ 7.083</div>
+                        <div class="free-shipping">Envío gratis ⚡ FULL</div>
+                        <div class="product-title">Reloj Smartwatch Inteligente Deportivo Resistente Al Agua</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="ml-footer">
+        <div class="footer-container">
+            <ul class="footer-links">
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Cómo cuidamos tu privacidad</a></li>
+                <li><a href="#">Accesibilidad</a></li>
+                <li><a href="#">Ayuda / PQR</a></li>
+                <li><a href="#">www.sic.gov.co</a></li>
+            </ul>
+            <div class="footer-copyright">
+                Copyright © 1999-2026 MercadoLibre Colombia LTDA.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
