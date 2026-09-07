@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MercadoLibre - Clon en HTML + CSS (Claude)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HEADER PRINCIPAL (amarillo)                                   -->
+    <!-- ============================================================ -->
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a href="#" class="logo">mercado<span>libre</span></a>
+
+            <form class="search" action="#" method="get">
+                <input type="text" name="q" class="search__input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit" class="search__btn" aria-label="Buscar">🔍</button>
+            </form>
+
+            <div class="topbar__links">
+                <a href="#" class="topbar__link topbar__link--location">📍 Enviar a<br><b>Popayán</b></a>
+                <a href="#" class="topbar__link">Bienvenido<br><b>Creá tu cuenta</b></a>
+                <a href="#" class="topbar__link">Ingresá</a>
+                <a href="#" class="topbar__link">Mis compras</a>
+                <a href="#" class="topbar__link topbar__link--cart" aria-label="Carrito">🛒</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra secundaria de categorías -->
+    <nav class="subnav">
+        <ul class="subnav__list">
+            <li><a href="#"><b>☰ Categorías</b></a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Cupones</a></li>
+            <li><a href="#">Supermercado</a></li>
+            <li><a href="#">Moda</a></li>
+            <li><a href="#">Mercado Play</a></li>
+            <li><a href="#">Vendé</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ============================================================ -->
+        <!-- BANNER PRINCIPAL                                              -->
+        <!-- ============================================================ -->
+        <section class="hero">
+            <h1 class="hero__title">HOT SALE - Hasta 40% OFF</h1>
+            <p class="hero__subtitle">en Tecnología, Hogar y Moda &nbsp;|&nbsp; Envío gratis en miles de productos</p>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- CATEGORÍAS DESTACADAS                                         -->
+        <!-- ============================================================ -->
+        <section class="container card">
+            <ul class="categories">
+                <li class="categories__item">
+                    <span class="categories__icon">💻</span>
+                    <a href="#">Tecnología</a>
+                </li>
+                <li class="categories__item">
+                    <span class="categories__icon">🧺</span>
+                    <a href="#">Electrodomésticos</a>
+                </li>
+                <li class="categories__item">
+                    <span class="categories__icon">👗</span>
+                    <a href="#">Moda</a>
+                </li>
+                <li class="categories__item">
+                    <span class="categories__icon">🏠</span>
+                    <a href="#">Hogar</a>
+                </li>
+                <li class="categories__item">
+                    <span class="categories__icon">⚽</span>
+                    <a href="#">Deportes</a>
+                </li>
+                <li class="categories__item">
+                    <span class="categories__icon">🚗</span>
+                    <a href="#">Vehículos</a>
+                </li>
+                <li class="categories__item">
+                    <span class="categories__icon">💄</span>
+                    <a href="#">Belleza</a>
+                </li>
+                <li class="categories__item">
+                    <span class="categories__icon">🧸</span>
+                    <a href="#">Juguetes</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- OFERTAS DEL DÍA                                               -->
+        <!-- ============================================================ -->
+        <section class="container">
+            <div class="section-header">
+                <h2>Ofertas del día</h2>
+                <a href="#" class="section-header__link">Ver todas</a>
+            </div>
+
+            <div class="products-grid">
+
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="../img/producto-1.webp" alt="Samsung Galaxy A15 128GB 4GB RAM">
+                    </div>
+                    <p class="product-card__title">Samsung Galaxy A15 128GB 4GB RAM</p>
+                    <p class="product-card__old-price">$ 899.000</p>
+                    <p class="product-card__price">$ 649.000 <span class="product-card__discount">27% OFF</span></p>
+                    <p class="product-card__shipping">Envío gratis</p>
+                    <p class="product-card__rating">⭐⭐⭐⭐⭐ (1.204)</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="../img/producto-2.webp" alt="Audífonos Bluetooth JBL Tune 510BT">
+                    </div>
+                    <p class="product-card__title">Audífonos Bluetooth JBL Tune 510BT</p>
+                    <p class="product-card__old-price">$ 250.000</p>
+                    <p class="product-card__price">$ 179.900 <span class="product-card__discount">28% OFF</span></p>
+                    <p class="product-card__shipping">Envío gratis</p>
+                    <p class="product-card__rating">⭐⭐⭐⭐⭐ (856)</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card__image product-card__image--placeholder">
+                        <span>🧊</span>
+                        <small>imagen del producto</small>
+                    </div>
+                    <p class="product-card__title">Nevera No Frost 300L Whirlpool</p>
+                    <p class="product-card__old-price">$ 2.400.000</p>
+                    <p class="product-card__price">$ 1.899.000 <span class="product-card__discount">21% OFF</span></p>
+                    <p class="product-card__shipping">Envío gratis</p>
+                    <p class="product-card__rating">⭐⭐⭐⭐ (312)</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card__image product-card__image--placeholder">
+                        <span>👟</span>
+                        <small>imagen del producto</small>
+                    </div>
+                    <p class="product-card__title">Tenis Deportivos Running Unisex</p>
+                    <p class="product-card__old-price">$ 320.000</p>
+                    <p class="product-card__price">$ 199.900 <span class="product-card__discount">37% OFF</span></p>
+                    <p class="product-card__shipping">Envío gratis</p>
+                    <p class="product-card__rating">⭐⭐⭐⭐⭐ (2.011)</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- MÁS VENDIDOS                                                  -->
+        <!-- ============================================================ -->
+        <section class="container">
+            <div class="section-header">
+                <h2>Los más vendidos</h2>
+                <a href="#" class="section-header__link">Ver todos</a>
+            </div>
+
+            <div class="products-grid">
+
+                <article class="product-card">
+                    <div class="product-card__image product-card__image--placeholder">
+                        <span>⌚</span>
+                        <small>imagen del producto</small>
+                    </div>
+                    <p class="product-card__title">Smartwatch Xiaomi Redmi Watch 4</p>
+                    <p class="product-card__price">$ 269.000</p>
+                    <p class="product-card__shipping">Envío gratis</p>
+                    <p class="product-card__rating">⭐⭐⭐⭐⭐ (980)</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card__image product-card__image--placeholder">
+                        <span>🖥️</span>
+                        <small>imagen del producto</small>
+                    </div>
+                    <p class="product-card__title">Monitor Gamer 27" 165Hz Full HD</p>
+                    <p class="product-card__price">$ 899.900</p>
+                    <p class="product-card__shipping">Envío gratis</p>
+                    <p class="product-card__rating">⭐⭐⭐⭐⭐ (410)</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card__image product-card__image--placeholder">
+                        <span>🎮</span>
+                        <small>imagen del producto</small>
+                    </div>
+                    <p class="product-card__title">Control Inalámbrico PS5 DualSense</p>
+                    <p class="product-card__price">$ 349.900</p>
+                    <p class="product-card__shipping">Envío gratis</p>
+                    <p class="product-card__rating">⭐⭐⭐⭐⭐ (1.578)</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card__image product-card__image--placeholder">
+                        <span>☕</span>
+                        <small>imagen del producto</small>
+                    </div>
+                    <p class="product-card__title">Cafetera Eléctrica Oster 12 Tazas</p>
+                    <p class="product-card__price">$ 159.900</p>
+                    <p class="product-card__shipping">Envío gratis</p>
+                    <p class="product-card__rating">⭐⭐⭐⭐ (203)</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER                                                        -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__col">
+                <h3>Acerca de MercadoLibre</h3>
+                <a href="#">Investor relations</a>
+                <a href="#">Tendencias</a>
+                <a href="#">Sustentabilidad</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer__col">
+                <h3>Otros sitios</h3>
+                <a href="#">Mercado Pago</a>
+                <a href="#">Mercado Shops</a>
+                <a href="#">Mercado Ads</a>
+                <a href="#">Developers</a>
+            </div>
+            <div class="footer__col">
+                <h3>Ayuda</h3>
+                <a href="#">Comprar</a>
+                <a href="#">Vender</a>
+                <a href="#">Resolución de problemas</a>
+                <a href="#">Centro de seguridad</a>
+            </div>
+            <div class="footer__col">
+                <h3>Seguinos en</h3>
+                <div class="footer__social">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                    <a href="#">▶️</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            Copyright © 2026 - Clon educativo hecho en HTML + CSS (sin JavaScript) - No afiliado a MercadoLibre
+        </div>
+    </footer>
+
+</body>
+
+</html>

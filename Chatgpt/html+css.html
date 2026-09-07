@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maqueta est&aacute;tica inspirada en Mercado Libre, creada solo con HTML y CSS.">
+  <title>Mercado Libre Colombia</title>
+  <style>
+    :root {
+      --yellow: #ffe600;
+      --page: #ebebeb;
+      --blue: #3483fa;
+      --text: #333333;
+      --muted: #737373;
+      --green: #00a650;
+      --surface: #ffffff;
+      --line: #e5e5e5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--page);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header { background: var(--yellow); }
+
+    .header-top {
+      display: grid;
+      grid-template-columns: 150px minmax(280px, 1fr) 230px;
+      gap: 24px;
+      align-items: center;
+      padding: 12px 0 10px;
+    }
+
+    .logo img { display: block; width: 134px; height: auto; }
+
+    .search {
+      display: flex;
+      height: 40px;
+      background: var(--surface);
+      border-radius: 2px;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 12%);
+    }
+
+    .search input {
+      min-width: 0;
+      flex: 1;
+      padding: 0 16px;
+      border: 0;
+      outline: 0;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .search button {
+      width: 46px;
+      border: 0;
+      border-left: 1px solid #eeeeee;
+      background: var(--surface);
+      color: #666;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      color: #604f00;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .benefit-badge {
+      display: grid;
+      width: 36px;
+      height: 30px;
+      place-items: center;
+      border-radius: 50%;
+      background: #1d1d1b;
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .header-bottom {
+      display: grid;
+      grid-template-columns: 150px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      min-height: 42px;
+      font-size: 14px;
+    }
+
+    .location { color: #604f00; font-size: 12px; line-height: 1.25; }
+    .location strong { display: block; color: #333; font-size: 13px; }
+
+    .menu, .account-menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      white-space: nowrap;
+    }
+
+    .menu a:hover, .account-menu a:hover, .section-title a:hover { color: var(--blue); }
+    .cart { font-size: 21px; }
+
+    main { padding: 24px 0 52px; }
+
+    .hero {
+      overflow: hidden;
+      height: 330px;
+      background: #dbe8f3;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .payments {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: -1px auto 42px;
+      background: var(--surface);
+      box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+    }
+
+    .payment {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 76px;
+      padding: 16px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .payment:last-child { border-right: 0; }
+    .payment-icon { color: var(--blue); font-size: 24px; }
+    .payment strong { display: block; font-size: 14px; font-weight: 400; }
+    .payment small { color: var(--blue); font-size: 12px; }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section-title h1, .section-title h2 {
+      margin: 0;
+      color: #666;
+      font-size: 26px;
+      font-weight: 400;
+    }
+
+    .section-title a { color: var(--blue); font-size: 14px; }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .product {
+      overflow: hidden;
+      background: var(--surface);
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 16px rgb(0 0 0 / 13%);
+    }
+
+    .product-image {
+      display: grid;
+      height: 205px;
+      place-items: center;
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .product-image img {
+      max-width: 100%;
+      max-height: 175px;
+      object-fit: contain;
+    }
+
+    .product-info { min-height: 177px; padding: 16px; }
+    .old-price { color: #999; font-size: 12px; text-decoration: line-through; }
+    .price-line { display: flex; align-items: baseline; gap: 7px; margin-top: 3px; }
+    .price { font-size: 23px; font-weight: 400; }
+    .discount, .shipping { color: var(--green); font-size: 12px; font-weight: 600; }
+    .shipping { display: block; margin-top: 8px; }
+    .product-name { margin: 10px 0 0; color: #666; font-size: 13px; line-height: 1.3; }
+
+    .footer {
+      padding: 26px 0 34px;
+      border-top: 1px solid #ddd;
+      background: var(--surface);
+      color: #666;
+      font-size: 12px;
+    }
+
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 20px; color: #333; }
+    .footer p { margin: 5px 0; color: #999; }
+
+    @media (max-width: 960px) {
+      .header-top { grid-template-columns: 134px 1fr; gap: 16px; }
+      .benefit { display: none; }
+      .header-bottom { grid-template-columns: 150px 1fr; gap: 16px; }
+      .account-menu { display: none; }
+      .menu { gap: 14px; overflow: hidden; }
+      .payments { grid-template-columns: repeat(2, 1fr); }
+      .payment:nth-child(2) { border-right: 0; }
+      .payment:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
+      .products { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .container { width: min(100% - 24px, 1180px); }
+      .header-top { grid-template-columns: 105px 1fr; padding: 10px 0; }
+      .logo img { width: 105px; }
+      .search { height: 36px; }
+      .search input { padding: 0 10px; font-size: 13px; }
+      .header-bottom { grid-template-columns: 1fr; padding: 8px 0; }
+      .location { display: none; }
+      .menu { justify-content: space-between; gap: 12px; font-size: 12px; }
+      .menu a:nth-child(n + 5) { display: none; }
+      main { padding-top: 12px; }
+      .hero { height: 155px; }
+      .payments { margin-bottom: 30px; }
+      .payment { min-height: 65px; padding: 10px; gap: 8px; }
+      .payment strong { font-size: 12px; }
+      .payment small { font-size: 11px; }
+      .payment-icon { font-size: 19px; }
+      .section-title h1, .section-title h2 { font-size: 22px; }
+      .products { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .product-image { height: 160px; }
+      .product-image img { max-height: 135px; }
+      .product-info { min-height: 165px; padding: 12px; }
+      .price { font-size: 19px; }
+      .product-name { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <a class="logo" href="#inicio" aria-label="Ir al inicio">
+          <img src="../img/logo.png" alt="Mercado Libre">
+        </a>
+        <form class="search" action="#" role="search">
+          <input type="search" aria-label="Buscar productos" placeholder="Buscar productos, marcas y m&aacute;s...">
+          <button type="submit" aria-label="Buscar">&#128269;</button>
+        </form>
+        <a class="benefit" href="#ofertas"><span class="benefit-badge">MELI</span>Suscr&iacute;bete al nivel 6</a>
+      </div>
+      <div class="header-bottom">
+        <a class="location" href="#ubicacion">&#128205; Ingresa tu ubicaci&oacute;n<strong>para recibir tus compras</strong></a>
+        <nav class="menu" aria-label="Navegaci&oacute;n principal">
+          <a href="#categorias">Categor&iacute;as &#9662;</a>
+          <a href="#ofertas">Ofertas</a>
+          <a href="#historial">Historial</a>
+          <a href="#supermercado">Supermercado</a>
+          <a href="#moda">Moda</a>
+          <a href="#vender">Vender</a>
+          <a href="#ayuda">Ayuda / PQR</a>
+        </nav>
+        <nav class="account-menu" aria-label="Cuenta">
+          <a href="#crear-cuenta">Crea tu cuenta</a>
+          <a href="#ingresa">Ingresa</a>
+          <a href="#compras">Mis compras</a>
+          <a class="cart" href="#carrito" aria-label="Carrito de compras">&#128722;</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero container" aria-label="Ofertas destacadas">
+      <img src="../img/banner-hero.webp" alt="Ofertas de la semana">
+    </section>
+
+    <section class="payments container" aria-label="Medios de pago">
+      <a class="payment" href="#cuotas"><span class="payment-icon">&#128179;</span><span><strong>Hasta 48 cuotas</strong><small>Ver m&aacute;s</small></span></a>
+      <a class="payment" href="#transferencia"><span class="payment-icon">&#127974;</span><span><strong>Transferencia bancaria</strong><small>Ver m&aacute;s</small></span></a>
+      <a class="payment" href="#efectivo"><span class="payment-icon">&#128181;</span><span><strong>Efectivo en puntos</strong><small>Ver m&aacute;s</small></span></a>
+      <a class="payment" href="#pagos"><span class="payment-icon">&#10133;</span><span><strong>M&aacute;s medios de pago</strong><small>Ver todos</small></span></a>
+    </section>
+
+    <section class="container" id="ofertas" aria-labelledby="ofertas-titulo">
+      <div class="section-title">
+        <h1 id="ofertas-titulo">Ofertas del d&iacute;a</h1>
+        <a href="#todas-las-ofertas">Ver todas</a>
+      </div>
+      <div class="products">
+        <article class="product">
+          <a href="#producto-1"><div class="product-image"><img src="../img/producto-1.webp" alt="Tel&eacute;fono Samsung Galaxy A15 azul"></div><div class="product-info"><span class="old-price">$ 1.299.900</span><div class="price-line"><span class="price">$ 899.900</span><span class="discount">30% OFF</span></div><span class="shipping">Env&iacute;o gratis FULL</span><p class="product-name">Samsung Galaxy A15 128 GB Azul</p></div></a>
+        </article>
+        <article class="product">
+          <a href="#producto-2"><div class="product-image"><img src="../img/producto-2.webp" alt="Port&aacute;til Lenovo Ideapad"></div><div class="product-info"><span class="old-price">$ 2.450.000</span><div class="price-line"><span class="price">$ 1.799.000</span><span class="discount">26% OFF</span></div><span class="shipping">Env&iacute;o gratis FULL</span><p class="product-name">Port&aacute;til Lenovo Ideapad 3 Intel Core i5</p></div></a>
+        </article>
+        <article class="product">
+          <a href="#producto-3"><div class="product-image"><img src="../img/producto-1.webp" alt="Aud&iacute;fonos inal&aacute;mbricos"></div><div class="product-info"><span class="old-price">$ 240.000</span><div class="price-line"><span class="price">$ 119.900</span><span class="discount">50% OFF</span></div><span class="shipping">Env&iacute;o gratis FULL</span><p class="product-name">Aud&iacute;fonos Bluetooth inal&aacute;mbricos</p></div></a>
+        </article>
+        <article class="product">
+          <a href="#producto-4"><div class="product-image"><img src="../img/producto-2.webp" alt="Smart TV 4K"></div><div class="product-info"><span class="old-price">$ 1.800.000</span><div class="price-line"><span class="price">$ 1.349.000</span><span class="discount">25% OFF</span></div><span class="shipping">Env&iacute;o gratis FULL</span><p class="product-name">Smart TV 43 pulgadas 4K Ultra HD</p></div></a>
+        </article>
+        <article class="product">
+          <a href="#producto-5"><div class="product-image"><img src="../img/producto-1.webp" alt="Tenis deportivos unisex"></div><div class="product-info"><span class="old-price">$ 350.000</span><div class="price-line"><span class="price">$ 199.900</span><span class="discount">42% OFF</span></div><span class="shipping">Env&iacute;o gratis</span><p class="product-name">Tenis deportivos running unisex</p></div></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer-links" aria-label="Enlaces del pie de p&aacute;gina">
+        <a href="#trabajo">Trabaja con nosotros</a><a href="#terminos">T&eacute;rminos y condiciones</a><a href="#promociones">Promociones</a><a href="#privacidad">C&oacute;mo cuidamos tu privacidad</a><a href="#accesibilidad">Accesibilidad</a><a href="#ayuda">Ayuda / PQR</a>
+      </nav>
+      <p>Copyright &copy; 1999-2026 MercadoLibre Colombia LTDA.</p>
+      <p>Esta es una maqueta educativa creada exclusivamente con HTML y CSS.</p>
+    </div>
+  </footer>
+</body>
+</html>
